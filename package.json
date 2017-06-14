@@ -1,0 +1,30 @@
+{
+  "name": "julia-set-html5",
+  "version": "1.0.0",
+  "description": "Julia sets visualisation",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/jelenaljaz/julia-set-html5.git"
+  },
+  "keywords": [
+    "julia",
+    "set",
+    "fractal",
+    "math",
+    "graphs"
+  ],
+  "author": "Aljaž Jelen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/jelenaljaz/julia-set-html5/issues"
+  },
+  "homepage": "https://gitlab.com/jelenaljaz/julia-set-html5#README"
+}
