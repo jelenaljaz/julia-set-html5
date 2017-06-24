@@ -22,4 +22,21 @@ main {
     justify-content: center;
     align-items: center;
     flex: 1 0 auto;
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+
+        input {
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+        }
+    }
+    #fractal {
+        width: $canvas_dim;
+        height: $canvas_dim;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+    }
 }

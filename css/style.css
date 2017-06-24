@@ -93,3 +93,19 @@ main {
   align-items: center;
   flex: 1 0 auto;
 }
+/* line 26, ../sass/_site.scss */
+main #form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+/* line 32, ../sass/_site.scss */
+main #form input:not(:first-child) {
+  margin-top: 10px;
+}
+/* line 37, ../sass/_site.scss */
+main #fractal {
+  width: 640px;
+  height: 640px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+}
