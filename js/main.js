@@ -1,35 +1,28 @@
-// factory function for C-like structs
-/*function struct(names) {
-    var name = names.split(', ');
-    var count = name.length;
-    function constructor() {
-        for (var i = 0; i < count; i++) {
-            this[name[i]] = arguments[i];
-        }
-    }
-
-    return constructor;
-}
-
-var CompNum = struct('x, y');
-var comp_num = new CompNum(12, 34);*/
-
-//alert(comp_num.x + ', ' + comp_num.y);
-
 $(document).ready(function () {
     var LIMIT = 1.7;
-    var DEPTH = 512;
+    var DEPTH = 256;
     var DIM = 640;
     var STEP = 2 * LIMIT / DIM;
 
     var c = { x: 0, y: 0 };
     var z0 = { x: 0, y: 0 };
 
-    var canvas = document.getElementById('canvas');
+    var canvas = $('#fractal').get(0);
     var ctx = canvas.getContext('2d');
-    var fractalData = ctx.getImageData(0, 0, DIM, DIM);
+    var imageData = ctx.createImageData(DIM, DIM);
 
-    function addNumbers (add1, add2) {
+    ctx.fillStyle ='#000000';
+    ctx.fillRect (0, 0, DIM, DIM);
+
+    function setPixel(image, x, y, r, g, b, a) {
+        var index = (x + y * image.width) * 4;
+        image.data[index + 0] = r;
+        image.data[index + 1] = g;
+        image.data[index + 2] = b;
+        image.data[index + 3] = a;
+    }
+
+    function addNumbers(add1, add2) {
         var add = { x: 0, y: 0 };
 
         add.x = add1.x + add2.x;
@@ -50,10 +43,13 @@ $(document).ready(function () {
     $('input[name="post"]').on('click', function (e) {
         e.preventDefault();
 
-        c.x = $('input[name="re"]').val();
-        c.y = $('input[name="im"]').val();
+        c.x = parseFloat($('input[name="re"]').val());
+        c.y = parseFloat($('input[name="im"]').val());
 
-        var re, im, canvas;
+        //console.log(c);
+
+        var re, im;
+        var r, g, b;
 
         for (var i = 0; i < DIM; i++) {
             re = i * STEP - LIMIT;
@@ -69,9 +65,16 @@ $(document).ready(function () {
                     z0 = addNumbers(multiplyNumbers(z0, z0), c);
                     n++;
                 }
+
+                r = (255 * n) / DEPTH;
+                g = (((255 * n) / DEPTH) * 2) % 256;
+                b = (((255 * n) / DEPTH) * 3) % 256;
+
+                setPixel(imageData, i, j, r, g, b, 255);
             }
         }
 
-        console.log(z0);
+        ctx.putImageData(imageData, 0, 0);
+        //console.log(imageData.data);
     });
 });
