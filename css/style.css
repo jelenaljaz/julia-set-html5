@@ -93,51 +93,75 @@ main {
   justify-content: center;
   align-items: center;
   flex: 1 0 auto;
+  flex-wrap: wrap;
 }
-/* line 26, ../sass/_site.scss */
+@media screen and (max-width: 768px) {
+  /* line 20, ../sass/_site.scss */
+  main {
+    justify-content: flex-start;
+    margin: 50px 0;
+  }
+}
+/* line 32, ../sass/_site.scss */
 main .text {
   width: 250px;
   margin-right: 25px;
 }
-/* line 30, ../sass/_site.scss */
+@media screen and (max-width: 768px) {
+  /* line 32, ../sass/_site.scss */
+  main .text {
+    margin-bottom: 25px;
+    margin-right: 0;
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+/* line 43, ../sass/_site.scss */
 main .text p {
   margin-bottom: 50px;
 }
-/* line 35, ../sass/_site.scss */
+/* line 48, ../sass/_site.scss */
 main #form {
   display: flex;
   flex-direction: column;
 }
-/* line 39, ../sass/_site.scss */
+/* line 52, ../sass/_site.scss */
 main #form input {
   height: 20px;
   line-height: 20px;
   border: 1px solid #aaaaaa;
   border-radius: 3px;
 }
-/* line 45, ../sass/_site.scss */
+/* line 58, ../sass/_site.scss */
 main #form input:not(:first-child) {
   margin-top: 10px;
 }
-/* line 50, ../sass/_site.scss */
+/* line 63, ../sass/_site.scss */
 main #fractal {
   width: 800px;
   height: 800px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 768px) {
+  /* line 63, ../sass/_site.scss */
+  main #fractal {
+    width: 100%;
+    height: auto;
+  }
+}
 
-/* line 57, ../sass/_site.scss */
+/* line 75, ../sass/_site.scss */
 footer a {
   color: #ffffff;
   text-decoration: none;
   transition: all ease-in-out .25s;
 }
-/* line 62, ../sass/_site.scss */
+/* line 80, ../sass/_site.scss */
 footer a:hover {
   color: #ff0000;
 }
 
-/* line 67, ../sass/_site.scss */
+/* line 85, ../sass/_site.scss */
 code, samp {
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
