@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500");
 /* line 5, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -94,18 +95,53 @@ main {
   flex: 1 0 auto;
 }
 /* line 26, ../sass/_site.scss */
+main .text {
+  width: 250px;
+  margin-right: 25px;
+}
+/* line 30, ../sass/_site.scss */
+main .text p {
+  margin-bottom: 50px;
+}
+/* line 35, ../sass/_site.scss */
 main #form {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
 }
-/* line 32, ../sass/_site.scss */
+/* line 39, ../sass/_site.scss */
+main #form input {
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+}
+/* line 45, ../sass/_site.scss */
 main #form input:not(:first-child) {
   margin-top: 10px;
 }
-/* line 37, ../sass/_site.scss */
+/* line 50, ../sass/_site.scss */
 main #fractal {
-  width: 640px;
-  height: 640px;
+  width: 800px;
+  height: 800px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* line 57, ../sass/_site.scss */
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all ease-in-out .25s;
+}
+/* line 62, ../sass/_site.scss */
+footer a:hover {
+  color: #ff0000;
+}
+
+/* line 67, ../sass/_site.scss */
+code, samp {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  background-color: #dddddd;
+  padding: 1px;
+  border-radius: 3px;
 }

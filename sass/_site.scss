@@ -23,12 +23,25 @@ main {
     align-items: center;
     flex: 1 0 auto;
 
+    .text {
+        width: 250px;
+        margin-right: 25px;
+
+        p {
+            margin-bottom: 50px;
+        }
+    }
+
     #form {
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
 
         input {
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid #aaaaaa;
+            border-radius: 3px;
+
             &:not(:first-child) {
                 margin-top: 10px;
             }
@@ -39,4 +52,22 @@ main {
         height: $canvas_dim;
         box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
     }
+}
+footer {
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: all ease-in-out .25s;
+
+        &:hover {
+            color: #ff0000;
+        }
+    }
+}
+code, samp {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    background-color: #dddddd;
+    padding: 1px;
+    border-radius: 3px;
 }

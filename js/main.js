@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var LIMIT = 1.7;
     var DEPTH = 256;
-    var DIM = 640;
+    var DIM = 800;
     var STEP = 2 * LIMIT / DIM;
 
     var c = { x: 0, y: 0 };
@@ -77,4 +77,11 @@ $(document).ready(function () {
         ctx.putImageData(imageData, 0, 0);
         //console.log(imageData.data);
     });
+
+    // get current year
+    // dynamically change year in footer
+    var time = new Date();
+    var year = time.getFullYear();
+
+    $('.copyright').append('' + year);
 });
