@@ -2,4 +2,4 @@
 
 This is HTML5 version of my Julia set visualisation program which was written in C.
 
-***WORK IN PROGRESS***
+You can find this app at [http://jelen.graphics/julia-sets/](http://jelen.graphics/julia-sets/).
