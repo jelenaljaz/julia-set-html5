@@ -1,7 +1,10 @@
 //basics
 html, body {
     height: 100%;
+    width: 100%;
+    max-width: 100%;
 }
+
 body {
     font-family: 'Roboto Condensed', sans-serif;
     display: flex;
@@ -13,10 +16,11 @@ header, footer {
     height: $banner_height;
     line-height: $banner_height;
     padding: 0 $padding;
-    width: calc(100% - ($padding * 2));
+    width: calc(100% - (#{$padding} * 2));
     background-color: #111111;
     color: #eeeeee;
 }
+
 main {
     display: flex;
     justify-content: center;
@@ -24,24 +28,47 @@ main {
     flex: 1 0 auto;
     flex-wrap: wrap;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         justify-content: flex-start;
         margin: 50px 0;
     }
 
     .text {
         width: 250px;
-        margin-right: 25px;
-
-        @media screen and (max-width: 768px) {
-            margin-bottom: 25px;
-            margin-right: 0;
-            width: 100%;
-            padding: 0 15px;
-        }
+        margin-right: $padding;
 
         p {
             margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: $padding;
+            margin-right: 0;
+            width: calc(100% - (#{$padding} * 2));
+            padding: 0 $padding;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            margin: $padding 0;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1099px) {
+            margin-top: $padding;
+            margin-right: 0;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: calc(100% - (#{$padding} * 2));
+            max-width: 800px;
+
+            p {
+                max-width: 45%;
+                margin-bottom: 0;
+            }
+
+            #form {
+                width: 35%;
+            }
         }
     }
 
@@ -50,8 +77,8 @@ main {
         flex-direction: column;
 
         input {
-            height: 20px;
-            line-height: 20px;
+            height: 25px;
+            line-height: 25px;
             border: 1px solid #aaaaaa;
             border-radius: 3px;
 
@@ -60,17 +87,24 @@ main {
             }
         }
     }
+
     #fractal {
         width: $canvas_dim;
         height: $canvas_dim;
         box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
 
-        @media screen and (max-width: 768px) {
-            width: 100%;
+        @media screen and (max-width: 1023px) {
+            width: calc(100% - (#{$padding} * 2));
+            margin: $padding;
             height: auto;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1099px) {
+            margin: $padding 0;
         }
     }
 }
+
 footer {
     a {
         color: #ffffff;
@@ -82,6 +116,7 @@ footer {
         }
     }
 }
+
 code, samp {
     font-family: 'Roboto Mono', monospace;
     font-size: 12px;

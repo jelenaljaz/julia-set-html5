@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500");
-/* line 5, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,45 +22,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../tools/ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../tools/ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -68,26 +68,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 2, ../sass/_site.scss */
 html, body {
   height: 100%;
+  width: 100%;
+  max-width: 100%;
 }
 
-/* line 5, ../sass/_site.scss */
+/* line 8, ../sass/_site.scss */
 body {
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   flex-direction: column;
 }
 
-/* line 12, ../sass/_site.scss */
+/* line 15, ../sass/_site.scss */
 header, footer {
   height: 50px;
   line-height: 50px;
   padding: 0 25px;
-  width: calc(100% - ($padding * 2));
+  width: calc(100% - (25px * 2));
   background-color: #111111;
   color: #eeeeee;
 }
 
-/* line 20, ../sass/_site.scss */
+/* line 24, ../sass/_site.scss */
 main {
   display: flex;
   justify-content: center;
@@ -95,73 +97,107 @@ main {
   flex: 1 0 auto;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 768px) {
-  /* line 20, ../sass/_site.scss */
+@media screen and (max-width: 767px) {
+  /* line 24, ../sass/_site.scss */
   main {
     justify-content: flex-start;
     margin: 50px 0;
   }
 }
-/* line 32, ../sass/_site.scss */
+/* line 36, ../sass/_site.scss */
 main .text {
   width: 250px;
   margin-right: 25px;
 }
-@media screen and (max-width: 768px) {
-  /* line 32, ../sass/_site.scss */
-  main .text {
-    margin-bottom: 25px;
-    margin-right: 0;
-    width: 100%;
-    padding: 0 15px;
-  }
-}
-/* line 43, ../sass/_site.scss */
+/* line 40, ../sass/_site.scss */
 main .text p {
   margin-bottom: 50px;
 }
-/* line 48, ../sass/_site.scss */
+@media screen and (max-width: 767px) {
+  /* line 36, ../sass/_site.scss */
+  main .text {
+    margin-bottom: 25px;
+    margin-right: 0;
+    width: calc(100% - (25px * 2));
+    padding: 0 25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 36, ../sass/_site.scss */
+  main .text {
+    margin: 25px 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1099px) {
+  /* line 36, ../sass/_site.scss */
+  main .text {
+    margin-top: 25px;
+    margin-right: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - (25px * 2));
+    max-width: 800px;
+  }
+  /* line 64, ../sass/_site.scss */
+  main .text p {
+    max-width: 45%;
+    margin-bottom: 0;
+  }
+  /* line 69, ../sass/_site.scss */
+  main .text #form {
+    width: 35%;
+  }
+}
+/* line 75, ../sass/_site.scss */
 main #form {
   display: flex;
   flex-direction: column;
 }
-/* line 52, ../sass/_site.scss */
+/* line 79, ../sass/_site.scss */
 main #form input {
-  height: 20px;
-  line-height: 20px;
+  height: 25px;
+  line-height: 25px;
   border: 1px solid #aaaaaa;
   border-radius: 3px;
 }
-/* line 58, ../sass/_site.scss */
+/* line 85, ../sass/_site.scss */
 main #form input:not(:first-child) {
   margin-top: 10px;
 }
-/* line 63, ../sass/_site.scss */
+/* line 91, ../sass/_site.scss */
 main #fractal {
   width: 800px;
   height: 800px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
 }
-@media screen and (max-width: 768px) {
-  /* line 63, ../sass/_site.scss */
+@media screen and (max-width: 1023px) {
+  /* line 91, ../sass/_site.scss */
   main #fractal {
-    width: 100%;
+    width: calc(100% - (25px * 2));
+    margin: 25px;
     height: auto;
   }
 }
+@media screen and (min-width: 1024px) and (max-width: 1099px) {
+  /* line 91, ../sass/_site.scss */
+  main #fractal {
+    margin: 25px 0;
+  }
+}
 
-/* line 75, ../sass/_site.scss */
+/* line 109, ../sass/_site.scss */
 footer a {
   color: #ffffff;
   text-decoration: none;
   transition: all ease-in-out .25s;
 }
-/* line 80, ../sass/_site.scss */
+/* line 114, ../sass/_site.scss */
 footer a:hover {
   color: #ff0000;
 }
 
-/* line 85, ../sass/_site.scss */
+/* line 120, ../sass/_site.scss */
 code, samp {
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
