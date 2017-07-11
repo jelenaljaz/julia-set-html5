@@ -1,9 +1,11 @@
 $(document).ready(function () {
+    // constants
     var LIMIT = 1.7;
     var DEPTH = 256;
     var DIM = 800;
     var STEP = 2 * LIMIT / DIM;
 
+    // complex numbers as objects
     var c = { x: 0, y: 0 };
     var z0 = { x: 0, y: 0 };
 
@@ -22,6 +24,7 @@ $(document).ready(function () {
         image.data[index + 3] = a;
     }
 
+    // addition of complex numbers
     function addNumbers(add1, add2) {
         var add = { x: 0, y: 0 };
 
@@ -31,6 +34,7 @@ $(document).ready(function () {
         return add;
     }
 
+    // multiplication of complex numbers
     function multiplyNumbers(mul1, mul2) {
         var mul = { x: 0, y: 0 };
 
@@ -40,13 +44,12 @@ $(document).ready(function () {
         return mul;
     }
 
+    // do the magic on button click
     $('input[name="post"]').on('click', function (e) {
         e.preventDefault();
 
         c.x = parseFloat($('input[name="re"]').val());
         c.y = parseFloat($('input[name="im"]').val());
-
-        //console.log(c);
 
         var re, im;
         var r, g, b;
@@ -75,7 +78,11 @@ $(document).ready(function () {
         }
 
         ctx.putImageData(imageData, 0, 0);
-        //console.log(imageData.data);
+
+        // save as png image on button click
+        var canvas = document.getElementById('fractal');
+        var url = canvas.toDataURL('image/png');
+        $('.save').attr('href', url);
     });
 
     // get current year

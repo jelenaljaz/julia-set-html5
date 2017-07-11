@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="css/style.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
 
@@ -30,13 +31,14 @@
             <div class="text">
                 <p>
                     This is an interactive Julia set grapher. All you have to do is to enter two parameters - real and imaginary components of a complex number 
-                    (example: <samp>0.285 0.01</samp>).<br><br>
-                    If you wish to save the fractal you see, just right click on it and press "Save image as...".
+                    (example: <samp>Re: 0.285 | Im: 0.01</samp>).<br><br>
+                    You can also save the fractal you see by clicking on "Save as image" button.
                 </p>
                 <form id="form">
                     <input type="text" name="re" value="" placeholder="real component">
                     <input type="text" name="im" value="" placeholder="imaginary component">
                     <input type="button" name="post" value="Submit">
+                    <a href="" class="save" download="fractal.png">Save as image</a>
                 </form>
             </div>
             <canvas id="fractal" width="800" height="800"></canvas>
