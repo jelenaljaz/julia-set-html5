@@ -143,3 +143,13 @@ code, samp {
     padding: 1px;
     border-radius: 3px;
 }
+
+a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: all ease-in-out .25s;
+
+    &:hover {
+        color: #ffcaca;
+    }
+}

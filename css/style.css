@@ -225,3 +225,14 @@ code, samp {
   padding: 1px;
   border-radius: 3px;
 }
+
+/* line 147, ../sass/_site.scss */
+a {
+  color: #ff0000;
+  text-decoration: none;
+  transition: all ease-in-out .25s;
+}
+/* line 152, ../sass/_site.scss */
+a:hover {
+  color: #ffcaca;
+}
