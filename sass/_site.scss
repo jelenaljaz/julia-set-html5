@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     flex-direction: column;
+    background: url('/img/pattern_jelen.png') center repeat;
 }
 
 // Main content
@@ -17,8 +18,12 @@ header, footer {
     line-height: $banner_height;
     padding: 0 $padding;
     width: calc(100% - (#{$padding} * 2));
-    background-color: #111111;
+    background-color: rgba(255, 255, 255, 0.1);
     color: #eeeeee;
+}
+
+header {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
 }
 
 main {
@@ -125,6 +130,8 @@ main {
 }
 
 footer {
+    box-shadow: 0 -3px 7px rgba(0, 0, 0, 0.5);
+
     a {
         color: #ffffff;
         text-decoration: none;
