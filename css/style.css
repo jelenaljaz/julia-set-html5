@@ -232,18 +232,19 @@ footer a:hover {
 code, samp {
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
+  color: #111111;
   background-color: #dddddd;
   padding: 1px;
   border-radius: 3px;
 }
 
-/* line 155, ../sass/_site.scss */
+/* line 156, ../sass/_site.scss */
 a {
   color: #ff0000;
   text-decoration: none;
   transition: all ease-in-out .25s;
 }
-/* line 160, ../sass/_site.scss */
+/* line 161, ../sass/_site.scss */
 a:hover {
   color: #ffcaca;
 }
