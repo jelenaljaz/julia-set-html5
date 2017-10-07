@@ -114,8 +114,9 @@ main {
 main .text {
   width: 250px;
   margin-right: 25px;
+  color: #eeeeee;
 }
-/* line 45, ../sass/_site.scss */
+/* line 46, ../sass/_site.scss */
 main .text p {
   margin-bottom: 50px;
 }
@@ -145,33 +146,33 @@ main .text p {
     width: calc(100% - (25px * 2));
     max-width: 800px;
   }
-  /* line 69, ../sass/_site.scss */
+  /* line 70, ../sass/_site.scss */
   main .text p {
     max-width: 45%;
     margin-bottom: 0;
   }
-  /* line 74, ../sass/_site.scss */
+  /* line 75, ../sass/_site.scss */
   main .text #form {
     width: 35%;
   }
 }
-/* line 80, ../sass/_site.scss */
+/* line 81, ../sass/_site.scss */
 main #form {
   display: flex;
   flex-direction: column;
 }
-/* line 84, ../sass/_site.scss */
+/* line 85, ../sass/_site.scss */
 main #form input {
   height: 25px;
   line-height: 25px;
   border: 1px solid #aaaaaa;
   border-radius: 3px;
 }
-/* line 90, ../sass/_site.scss */
+/* line 91, ../sass/_site.scss */
 main #form input:not(:first-child) {
   margin-top: 10px;
 }
-/* line 95, ../sass/_site.scss */
+/* line 96, ../sass/_site.scss */
 main #form .save {
   margin-top: 50px;
   text-transform: uppercase;
@@ -186,19 +187,19 @@ main #form .save {
   border-radius: 3px;
   transition: all ease-in-out .25s;
 }
-/* line 108, ../sass/_site.scss */
+/* line 109, ../sass/_site.scss */
 main #form .save:hover {
   background-color: #5cb85c;
   color: #ffffff;
 }
-/* line 115, ../sass/_site.scss */
+/* line 116, ../sass/_site.scss */
 main #fractal {
   width: 800px;
   height: 800px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 1023px) {
-  /* line 115, ../sass/_site.scss */
+  /* line 116, ../sass/_site.scss */
   main #fractal {
     width: calc(100% - (25px * 2));
     margin: 25px;
@@ -206,28 +207,28 @@ main #fractal {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1099px) {
-  /* line 115, ../sass/_site.scss */
+  /* line 116, ../sass/_site.scss */
   main #fractal {
     margin: 25px 0;
   }
 }
 
-/* line 132, ../sass/_site.scss */
+/* line 133, ../sass/_site.scss */
 footer {
   box-shadow: 0 -3px 7px rgba(0, 0, 0, 0.5);
 }
-/* line 135, ../sass/_site.scss */
+/* line 136, ../sass/_site.scss */
 footer a {
   color: #ffffff;
   text-decoration: none;
   transition: all ease-in-out .25s;
 }
-/* line 140, ../sass/_site.scss */
+/* line 141, ../sass/_site.scss */
 footer a:hover {
   color: #ff0000;
 }
 
-/* line 146, ../sass/_site.scss */
+/* line 147, ../sass/_site.scss */
 code, samp {
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
@@ -236,13 +237,13 @@ code, samp {
   border-radius: 3px;
 }
 
-/* line 154, ../sass/_site.scss */
+/* line 155, ../sass/_site.scss */
 a {
   color: #ff0000;
   text-decoration: none;
   transition: all ease-in-out .25s;
 }
-/* line 159, ../sass/_site.scss */
+/* line 160, ../sass/_site.scss */
 a:hover {
   color: #ffcaca;
 }
