@@ -77,7 +77,7 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   flex-direction: column;
-  background: url("assets/img/pattern_jelen.png") center repeat;
+  background: url("../img/pattern_jelen.png") center repeat;
 }
 
 /* line 16, ../sass/_site.scss */
